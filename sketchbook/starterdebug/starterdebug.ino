@@ -1,8 +1,8 @@
-
-
-
-
-
+//declare Inputs
+//lower case a0, d1 is not defined. d0 is not defined.
+int valA0;
+int valA1;
+int valD0;
 
 void setup() {
   Serial.begin(9600); // we need to send data to our terminal to see what is happening
@@ -22,9 +22,9 @@ void setup() {
 void loop() { 
   //get Inputs
   //lower case a0, d1 is not defined. d0 is not defined.
-  int valA0 = analogRead(A0);
-  int valA1 = analogRead(A1);
-  int valD0 = digitalRead(0);
+  valA0 = analogRead(A0);
+  valA1 = analogRead(A1);
+  valD0 = digitalRead(0);
 
   //interact with world
   //scale the values for the proper OUTPUT
@@ -42,17 +42,18 @@ void loop() {
   Serial.print(valA0);
   Serial.print(", mapA0: ");
   Serial.print(mapA0);
-  
+
   Serial.print(", valA1: ");
   Serial.print(valA1);
   Serial.print(", mapA1: ");
   Serial.print(mapA1);
-  
+
   Serial.print(", valD0: ");
   Serial.println(valD0);
-  
+
   delay(15);
 }
+
 
 
 

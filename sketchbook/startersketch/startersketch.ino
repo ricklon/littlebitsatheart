@@ -1,5 +1,10 @@
 
-
+  //declare Inputs
+  //lower case a0, d1 is not defined. d0 is not defined.
+  int valA0;
+  int valA1;
+  int valD0;
+  
 void setup() {
   //pin mode OUTPUT data or energy out
   pinMode(1, OUTPUT);
@@ -16,9 +21,9 @@ void setup() {
 void loop() { 
   //get Inputs
   //lower case a0, d1 is not defined. d0 is not defined.
-  int valA0 = analogRead(A0);
-  int valA1 = analogRead(A1);
-  int valD0 = digitalRead(0);
+  valA0 = analogRead(A0);
+  valA1 = analogRead(A1);
+  valD0 = digitalRead(0);
 
 
   //interact with world
@@ -33,6 +38,3 @@ void loop() {
   analogWrite(9, mapA1);
 
 }
-
-
-
